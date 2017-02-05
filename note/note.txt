@@ -1,0 +1,51 @@
+  debugger;//f8是执行断点调试  f11是句调试
+ 2) 函数中  function.apply(this,arguments)这个是数组  function.call(this,num1,num2)这个是列表
+ 函数 一看见一个函数就开辟一个新寨
+ 3)我们自己做了一个类 我们创建一个类的实例的时候我们想让我们创建的实例有一定的属性，我们可以通过在类里面通过  this.name的方法来实现这个效果 但是假如我们通脱var name="";这样的话name就是类的私有的  类的实例再次用的时候是不行的 假如我们确实想用这个这个私有的属性我们需要给这个类进行公开化  this.show(){} 这样就可以了
+ oTab.innerHTML=str;//通过这个innerHtml可已经将字符串转变成标签实现 例子是99
+ 数组去重的思想：将数组中的每个值都当做obj中的属性名来操作，同时利用对象中添加属性名这一个功能来实现该obj[cur]=cur;数组改变的地方为ary.length--; 利用对象增加属性名返回的值为为具体的数 或者undefined
+99因为是动态的  所以不能用标签写死  用字符串拼接来实现
+对象增加的时候  先查找 后增加  如果有就修改  没有则增加返回值为undefined  删除对象 obj.age=null  delete  obj["age"]
+遍历对象就是 获取对象的属性名和属性值  for...in..
+for(var key  in obj);key是存放属性名的
+输出属性名  console.log(key)
+输出属性值  console.log(obj[key])  这是一个变量
+假如是console.log(obj["key"])  这是一个固有的属性名
+想看的更好一些一起输出 console.log("属性名："+key+"--->属性名："+obj[key])
+splice(n,m) 和字符串中的substr(n,m)一样都是从索引n开始删除m个  slice(n,m)和substring
+(n,m)从索引n开始的内容  到m  m是不包括
+ary.toString()转化为字符串;
+        if(obj[cur]==cur){//对象添加属性名的时候 假如属性名是变量的时候  只能用obj[cur]==cur不能使用obj.cur
+continue  跳出本次循环  break 跳出本层循环  遇到continue和break后面的代码不在执行  return也是可以的    continue  可以替换掉else{}不在使用这个
+[]==[]  ({}=={})对象比较永远不想等 因为比较的是地址 地址永远不可能想相等
+   // ary.sort(function(a,b){//回调函数
+        //a表示数组的前一项  b是后一项
+        //return a-b;//从小到大
+        //return b-a;//从大到小
+   // });
+// true=="aa"  false=="0"  true=="123"
+每个函数 运行完一定会有一个返回值在 暴露在全局下  没有return有返回值返回值为undefined
+遇到return  终止这个方法了 这个方法也不在执行  后面的代码不执行了  可以在没有函数的
+    var total=5;
+    function sum(a,b){
+        var total=null;
+        total=a+b;
+    }
+    console.log(sum());//这个时候输出为 undefined  就可以看出来
+    console.log(sum(a));//传一个参数  a+undefined-->NaN
+//这是函数arguments存放的方式{0:12,1:2;2:21,3:14}   [12,2,21,14]
+"111"是有效数字为什么这个是有效数使用Number就是为了防止这种拼接字符;
+"zhufeng"不是有效数字
+往数组加一项  ary.[ary.length]=res
+DOM 文档对象模型 document.getElementById()
+ var oPs=document.getElementsByTagName("p")  获得是一组元素   即使一组元素  也的需要使用
+   console.log(oPs)是这个元素p
+  oPs[0].style.backgroundColor="red"
+  ********isNaN()有隐形的转化为number数据类型的功能*******
+   var res=fn(5);
+  res=5*fn(4)//在这等着  一直等着 等到函数彻底运行完之后  才会把结果赋值给res
+  访问器属性
+
+
+
+

@@ -1,0 +1,6 @@
+ var sum;  //undefined 没有赋值的变量返回的就是undefined
+     //instanceof  检测一个对象属于哪个类的实例(可以检测出对象的细分类型) 如果是的话返回true,不是的话返回false
+         //console.log(ary instanceof Array);//true
+         //console.log(ary instanceof  RegExp) ;//false;
+     console.log(reg instanceof  RegExp) ;//true;扩展部分
+     console.log(Object.prototype.toString.call(ary));  //"[object Array]" (扩展部分,在正式课第一周面向对象详细讲解)
